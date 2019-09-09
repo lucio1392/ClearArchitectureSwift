@@ -8,7 +8,7 @@
 
 import Foundation
 
-public struct PhotoSource: Codable {
+public struct PhotoSource: Decodable {
     
     public let small: String?
     public let thumb: String?

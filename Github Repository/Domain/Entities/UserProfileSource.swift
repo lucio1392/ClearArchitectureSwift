@@ -8,7 +8,7 @@
 
 import Foundation
 
-public struct UserProfileSource: Codable {
+public struct UserProfileSource: Decodable {
     
     let small: String?
     let medium: String?

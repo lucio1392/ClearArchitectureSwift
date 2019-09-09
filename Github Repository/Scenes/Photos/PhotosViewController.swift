@@ -8,14 +8,54 @@
 
 import Foundation
 import UIKit
+import RxCocoa
+import RxSwift
 
 final class PhotosViewController: UIViewController {
     
-    let photoUseCase = UseCasesProviderPlatform()
+    @IBOutlet weak var photosCollectionView: UICollectionView!
+    
+    private let disposeBag = DisposeBag()
+    
+    private let viewModel: PhotosViewModel
+    
+    init(_ viewModel: PhotosViewModel) {
+        self.viewModel = viewModel
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    private func configUI() {
+        photosCollectionView.register(UINib(nibName: "PhotoCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "PhotosCell")
+        guard let photoLayout = photosCollectionView.collectionViewLayout as? UICollectionViewFlowLayout else {
+            return
+        }
+        
+        photoLayout.itemSize = CGSize(width: 200, height: 200)
+        photoLayout.minimumInteritemSpacing = 10.0
+        photoLayout.minimumLineSpacing = 10.0
+    }
+    
+    private func bindViewModel() {
+        let output = viewModel.transform(input: PhotosViewModel.Input())
+        
+        output
+            .photos
+            .drive(photosCollectionView.rx.items(cellIdentifier: "PhotosCell", cellType: PhotoCollectionViewCell.self)) { cl, model, cell in
+            cell.bind(model)
+        }
+            .disposed(by: disposeBag)
+        
+        
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        configUI()
+        bindViewModel()
     }
     
 }

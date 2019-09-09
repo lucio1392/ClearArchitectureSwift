@@ -8,7 +8,7 @@
 
 import Foundation
 
-public struct User: Codable {
+public struct User: Decodable {
     
     public let id: String
     public let updatedAt: String?
@@ -50,9 +50,5 @@ public struct User: Codable {
         self.bio = try container.decodeIfPresent(String.self, forKey: .bio)
         self.location = try container.decodeIfPresent(String.self, forKey: .location)
         self.profileImage = try container.decode(UserProfileSource.self, forKey: .profileImage)
-    }
-    
-    public func encode(to encoder: Encoder) throws {
-        
     }
 }

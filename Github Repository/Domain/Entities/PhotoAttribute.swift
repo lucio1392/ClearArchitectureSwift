@@ -8,7 +8,7 @@
 
 import Foundation
 
-public struct PhotoAttribute: Codable {
+public struct PhotoAttribute: Decodable {
     
     public let width: Double?
     public let height: Double?

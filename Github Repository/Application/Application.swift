@@ -24,15 +24,14 @@ final class Application: Applicationable {
     }
     
     func configureMainInterface(window: UIWindow) {
-        let tabbarController = UITabBarController()
-        
         let photosNavigationController = UINavigationController()
-        tabbarController.tabBarItem = UITabBarItem(title: "Photos", image: nil, selectedImage: nil)
+        
         let photosNavigator = PhotoNavigator(networkUsecaseProvider,
                                              navigationController: photosNavigationController)
-        
-        tabbarController.viewControllers = [photosNavigationController]
-        window.rootViewController = tabbarController
+
+        window.rootViewController = photosNavigationController
+        window.makeKeyAndVisible()
+        photosNavigator.toPhotos()
     }
     
 }

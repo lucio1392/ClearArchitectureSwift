@@ -24,10 +24,15 @@
 		FA1771332322411A00CD682D /* NetworkConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1771322322411A00CD682D /* NetworkConfig.swift */; };
 		FA17713823224E7200CD682D /* UseCasesProviderPlatform.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA17713723224E7200CD682D /* UseCasesProviderPlatform.swift */; };
 		FA17713B2322501800CD682D /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA17713A2322501800CD682D /* PhotosViewController.swift */; };
-		FA17713D232251F900CD682D /* PhotoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA17713C232251F900CD682D /* PhotoViewModel.swift */; };
-		FA17713F2322570F00CD682D /* PhotoNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA17713E2322570F00CD682D /* PhotoNavigator.swift */; };
+		FA17713D232251F900CD682D /* PhotosViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA17713C232251F900CD682D /* PhotosViewModel.swift */; };
+		FA17713F2322570F00CD682D /* PhotosNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA17713E2322570F00CD682D /* PhotosNavigator.swift */; };
 		FA1771422322584700CD682D /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1771412322584700CD682D /* ViewModelType.swift */; };
 		FA1771442322592000CD682D /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1771432322592000CD682D /* Application.swift */; };
+		FA1771462326408700CD682D /* PhotosViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA1771452326408700CD682D /* PhotosViewController.xib */; };
+		FA17714A2326453600CD682D /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1771482326453600CD682D /* PhotoCollectionViewCell.swift */; };
+		FA17714B2326453600CD682D /* PhotoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA1771492326453600CD682D /* PhotoCollectionViewCell.xib */; };
+		FA17714D2326524400CD682D /* Kingfisher+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA17714C2326524400CD682D /* Kingfisher+Rx.swift */; };
+		FA17714F2326526200CD682D /* KingFisherManage+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA17714E2326526200CD682D /* KingFisherManage+Rx.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,10 +57,15 @@
 		FA1771322322411A00CD682D /* NetworkConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConfig.swift; sourceTree = "<group>"; };
 		FA17713723224E7200CD682D /* UseCasesProviderPlatform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCasesProviderPlatform.swift; sourceTree = "<group>"; };
 		FA17713A2322501800CD682D /* PhotosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
-		FA17713C232251F900CD682D /* PhotoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewModel.swift; sourceTree = "<group>"; };
-		FA17713E2322570F00CD682D /* PhotoNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoNavigator.swift; sourceTree = "<group>"; };
+		FA17713C232251F900CD682D /* PhotosViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewModel.swift; sourceTree = "<group>"; };
+		FA17713E2322570F00CD682D /* PhotosNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosNavigator.swift; sourceTree = "<group>"; };
 		FA1771412322584700CD682D /* ViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
 		FA1771432322592000CD682D /* Application.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
+		FA1771452326408700CD682D /* PhotosViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotosViewController.xib; sourceTree = "<group>"; };
+		FA1771482326453600CD682D /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
+		FA1771492326453600CD682D /* PhotoCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoCollectionViewCell.xib; sourceTree = "<group>"; };
+		FA17714C2326524400CD682D /* Kingfisher+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Kingfisher+Rx.swift"; sourceTree = "<group>"; };
+		FA17714E2326526200CD682D /* KingFisherManage+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "KingFisherManage+Rx.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +160,7 @@
 		FA1771152321FEB600CD682D /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				FA177147232640C200CD682D /* Photo */,
 				FA17713923224F7B00CD682D /* Photos */,
 			);
 			path = Scenes;
@@ -222,9 +233,12 @@
 		FA17713923224F7B00CD682D /* Photos */ = {
 			isa = PBXGroup;
 			children = (
+				FA17713C232251F900CD682D /* PhotosViewModel.swift */,
+				FA17713E2322570F00CD682D /* PhotosNavigator.swift */,
 				FA17713A2322501800CD682D /* PhotosViewController.swift */,
-				FA17713C232251F900CD682D /* PhotoViewModel.swift */,
-				FA17713E2322570F00CD682D /* PhotoNavigator.swift */,
+				FA1771452326408700CD682D /* PhotosViewController.xib */,
+				FA1771482326453600CD682D /* PhotoCollectionViewCell.swift */,
+				FA1771492326453600CD682D /* PhotoCollectionViewCell.xib */,
 			);
 			path = Photos;
 			sourceTree = "<group>";
@@ -233,8 +247,17 @@
 			isa = PBXGroup;
 			children = (
 				FA1771412322584700CD682D /* ViewModelType.swift */,
+				FA17714C2326524400CD682D /* Kingfisher+Rx.swift */,
+				FA17714E2326526200CD682D /* KingFisherManage+Rx.swift */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		FA177147232640C200CD682D /* Photo */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Photo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -297,6 +320,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA1771462326408700CD682D /* PhotosViewController.xib in Resources */,
+				FA17714B2326453600CD682D /* PhotoCollectionViewCell.xib in Resources */,
 				FA17710B2321F5A600CD682D /* LaunchScreen.storyboard in Resources */,
 				FA1771082321F5A600CD682D /* Assets.xcassets in Resources */,
 			);
@@ -355,14 +380,17 @@
 				FA17712B23223EF000CD682D /* PhotoProvider.swift in Sources */,
 				FA17711C2322083D00CD682D /* Photo.swift in Sources */,
 				FA1771332322411A00CD682D /* NetworkConfig.swift in Sources */,
+				FA17714A2326453600CD682D /* PhotoCollectionViewCell.swift in Sources */,
 				FA1771012321F5A500CD682D /* AppDelegate.swift in Sources */,
-				FA17713F2322570F00CD682D /* PhotoNavigator.swift in Sources */,
-				FA17713D232251F900CD682D /* PhotoViewModel.swift in Sources */,
+				FA17713F2322570F00CD682D /* PhotosNavigator.swift in Sources */,
+				FA17714F2326526200CD682D /* KingFisherManage+Rx.swift in Sources */,
+				FA17713D232251F900CD682D /* PhotosViewModel.swift in Sources */,
 				FA17711E2322084200CD682D /* User.swift in Sources */,
 				FA1771282322366000CD682D /* UseCasesProvider.swift in Sources */,
 				FA1771242322183500CD682D /* UserProfileSource.swift in Sources */,
 				FA17713823224E7200CD682D /* UseCasesProviderPlatform.swift in Sources */,
 				FA1771422322584700CD682D /* ViewModelType.swift in Sources */,
+				FA17714D2326524400CD682D /* Kingfisher+Rx.swift in Sources */,
 				FA1771262322360C00CD682D /* PhotoUseCase.swift in Sources */,
 				FA17712223220B0500CD682D /* PhotoSource.swift in Sources */,
 				FA17712023220A2600CD682D /* PhotoAttribute.swift in Sources */,
