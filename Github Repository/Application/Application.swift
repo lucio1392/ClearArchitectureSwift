@@ -26,7 +26,7 @@ final class Application: Applicationable {
     func configureMainInterface(window: UIWindow) {
         let photosNavigationController = UINavigationController()
         
-        let photosNavigator = PhotoNavigator(networkUsecaseProvider,
+        let photosNavigator = PhotosNavigator(networkUsecaseProvider,
                                              navigationController: photosNavigationController)
 
         window.rootViewController = photosNavigationController

@@ -14,7 +14,7 @@ final class PhotoUseCasePlatform: PhotoUseCase {
     
     private let network = Network<Photo, PhotoTarget>()
     
-    func photos() -> Observable<[Photo]> {
+    func photos() -> Observable<[Photo]> {                
         return network.getItems(.photos)
     }
     

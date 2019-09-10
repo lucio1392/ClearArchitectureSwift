@@ -21,6 +21,7 @@ public struct User: Decodable {
     public let bio: String?
     public let location: String?
     public let profileImage: UserProfileSource
+    public var accessToken: AccessToken?
     
     private enum CodingKeys: String, CodingKey {
         case id

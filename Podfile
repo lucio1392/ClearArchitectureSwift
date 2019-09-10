@@ -11,4 +11,5 @@ target 'Github Repository' do
     pod 'Moya/RxSwift'
     pod 'RxRealm'
     pod 'Kingfisher'
+    pod 'RxSwiftExt'
 end

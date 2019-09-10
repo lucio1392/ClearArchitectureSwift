@@ -40,7 +40,9 @@ final class PhotosViewController: UIViewController {
     }
     
     private func bindViewModel() {
-        let output = viewModel.transform(input: PhotosViewModel.Input())
+        let onToPhoto = photosCollectionView.rx.modelSelected(Photo.self).asDriver()
+        let input = PhotosViewModel.Input(onToPhoto: onToPhoto)
+        let output = viewModel.transform(input: input)
         
         output
             .photos
@@ -49,6 +51,13 @@ final class PhotosViewController: UIViewController {
         }
             .disposed(by: disposeBag)
         
+        
+        output
+            .error
+            .drive(onNext: {
+                print("Error: \($0)")
+        })
+            .disposed(by: disposeBag)
         
     }
     

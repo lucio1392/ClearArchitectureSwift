@@ -17,6 +17,11 @@ class PhotoCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        contentView.layer.cornerRadius = 6.0
+        contentView.layer.masksToBounds = true
+        contentView.clipsToBounds = true
+        contentView.backgroundColor = .red
+        
     }
     
     func bind(_ photo: Photo) {

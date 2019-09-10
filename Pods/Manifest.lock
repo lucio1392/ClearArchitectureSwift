@@ -19,6 +19,14 @@ PODS:
     - RealmSwift (~> 3.0)
     - RxSwift (~> 4.0)
   - RxSwift (4.5.0)
+  - RxSwiftExt (3.4.0):
+    - RxSwiftExt/Core (= 3.4.0)
+    - RxSwiftExt/RxCocoa (= 3.4.0)
+  - RxSwiftExt/Core (3.4.0):
+    - RxSwift (~> 4.0)
+  - RxSwiftExt/RxCocoa (3.4.0):
+    - RxCocoa (~> 4.0)
+    - RxSwiftExt/Core
 
 DEPENDENCIES:
   - Kingfisher
@@ -26,6 +34,7 @@ DEPENDENCIES:
   - RxCocoa
   - RxRealm
   - RxSwift
+  - RxSwiftExt
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -38,6 +47,7 @@ SPEC REPOS:
     - RxCocoa
     - RxRealm
     - RxSwift
+    - RxSwiftExt
 
 SPEC CHECKSUMS:
   Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
@@ -49,7 +59,8 @@ SPEC CHECKSUMS:
   RxCocoa: cbf70265dc65a981d4ac982e513c10cf23df24a0
   RxRealm: 5379eddd74f8d617ca7681d1f8d144af25b432b0
   RxSwift: f172070dfd1a93d70a9ab97a5a01166206e1c575
+  RxSwiftExt: 01f8ecbeeb355698e9c75365ebe908b00dacf45d
 
-PODFILE CHECKSUM: 5f4059a7ac08a45aba68702025eae738d73c78e9
+PODFILE CHECKSUM: 3adbfe573618153b0f4828e81af6c574a8f94fa0
 
 COCOAPODS: 1.7.5

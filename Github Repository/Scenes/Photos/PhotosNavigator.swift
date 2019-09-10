@@ -9,12 +9,12 @@
 import Foundation
 import UIKit
 
-protocol PhotoNavigation {
+protocol PhotosNavigation {
     func toPhotos()
     func toPhoto(photo: Photo)
 }
 
-final class PhotoNavigator: PhotoNavigation {
+final class PhotosNavigator: PhotosNavigation {
     
     private let useCaseProvider: UseCasesProvider
     private let navigationController: UINavigationController
@@ -33,6 +33,9 @@ final class PhotoNavigator: PhotoNavigation {
     }
     
     func toPhoto(photo: Photo) {
-        
+        let photoNavigator = PhotoNavigator(self.navigationController)
+        let photoViewModel = PhotoViewModel(photoNavigator, photo: photo)
+        let photoViewController = PhotoViewController(photoViewModel)
+        navigationController.pushViewController(photoViewController, animated: true)
     }
 }

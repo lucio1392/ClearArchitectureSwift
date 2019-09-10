@@ -33,6 +33,19 @@
 		FA17714B2326453600CD682D /* PhotoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA1771492326453600CD682D /* PhotoCollectionViewCell.xib */; };
 		FA17714D2326524400CD682D /* Kingfisher+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA17714C2326524400CD682D /* Kingfisher+Rx.swift */; };
 		FA17714F2326526200CD682D /* KingFisherManage+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA17714E2326526200CD682D /* KingFisherManage+Rx.swift */; };
+		FA17715123275DE800CD682D /* PhotosError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA17715023275DE800CD682D /* PhotosError.swift */; };
+		FA1771532327837F00CD682D /* PhotoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1771522327837F00CD682D /* PhotoViewModel.swift */; };
+		FA1771552327854300CD682D /* PhotoNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1771542327854300CD682D /* PhotoNavigator.swift */; };
+		FA1771582327882A00CD682D /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1771562327882A00CD682D /* PhotoViewController.swift */; };
+		FA1771592327882A00CD682D /* PhotoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA1771572327882A00CD682D /* PhotoViewController.xib */; };
+		FA17715B232793BA00CD682D /* AuthenticationUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA17715A232793BA00CD682D /* AuthenticationUseCase.swift */; };
+		FA17715D2327941600CD682D /* AuthenticationUseCasePlatform.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA17715C2327941600CD682D /* AuthenticationUseCasePlatform.swift */; };
+		FA1771602327947C00CD682D /* UserProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA17715F2327947C00CD682D /* UserProvider.swift */; };
+		FA17716223279D2900CD682D /* AccessToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA17716123279D2900CD682D /* AccessToken.swift */; };
+		FA17716523279E0C00CD682D /* LoginNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA17716423279E0C00CD682D /* LoginNavigator.swift */; };
+		FA17716723279E1300CD682D /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA17716623279E1300CD682D /* LoginViewModel.swift */; };
+		FA17716A23279E2100CD682D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA17716823279E2100CD682D /* LoginViewController.swift */; };
+		FA17716B23279E2100CD682D /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA17716923279E2100CD682D /* LoginViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +79,19 @@
 		FA1771492326453600CD682D /* PhotoCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoCollectionViewCell.xib; sourceTree = "<group>"; };
 		FA17714C2326524400CD682D /* Kingfisher+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Kingfisher+Rx.swift"; sourceTree = "<group>"; };
 		FA17714E2326526200CD682D /* KingFisherManage+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "KingFisherManage+Rx.swift"; sourceTree = "<group>"; };
+		FA17715023275DE800CD682D /* PhotosError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosError.swift; sourceTree = "<group>"; };
+		FA1771522327837F00CD682D /* PhotoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewModel.swift; sourceTree = "<group>"; };
+		FA1771542327854300CD682D /* PhotoNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoNavigator.swift; sourceTree = "<group>"; };
+		FA1771562327882A00CD682D /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
+		FA1771572327882A00CD682D /* PhotoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoViewController.xib; sourceTree = "<group>"; };
+		FA17715A232793BA00CD682D /* AuthenticationUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationUseCase.swift; sourceTree = "<group>"; };
+		FA17715C2327941600CD682D /* AuthenticationUseCasePlatform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationUseCasePlatform.swift; sourceTree = "<group>"; };
+		FA17715F2327947C00CD682D /* UserProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProvider.swift; sourceTree = "<group>"; };
+		FA17716123279D2900CD682D /* AccessToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessToken.swift; sourceTree = "<group>"; };
+		FA17716423279E0C00CD682D /* LoginNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginNavigator.swift; sourceTree = "<group>"; };
+		FA17716623279E1300CD682D /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		FA17716823279E2100CD682D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		FA17716923279E2100CD682D /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +186,7 @@
 		FA1771152321FEB600CD682D /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				FA17716323279E0100CD682D /* Login */,
 				FA177147232640C200CD682D /* Photo */,
 				FA17713923224F7B00CD682D /* Photos */,
 			);
@@ -174,6 +201,8 @@
 				FA17711B2322083D00CD682D /* Photo.swift */,
 				FA17711D2322084200CD682D /* User.swift */,
 				FA1771232322183500CD682D /* UserProfileSource.swift */,
+				FA17715023275DE800CD682D /* PhotosError.swift */,
+				FA17716123279D2900CD682D /* AccessToken.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -181,6 +210,7 @@
 		FA1771182321FEEA00CD682D /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
+				FA17715A232793BA00CD682D /* AuthenticationUseCase.swift */,
 				FA1771252322360C00CD682D /* PhotoUseCase.swift */,
 				FA1771272322365F00CD682D /* UseCasesProvider.swift */,
 			);
@@ -192,7 +222,6 @@
 			children = (
 				FA17712F23223F6700CD682D /* UseCases */,
 				FA17712C23223F2E00CD682D /* Network */,
-				FA17712923223EB000CD682D /* PhotoAPI */,
 			);
 			path = NetworkPlatform;
 			sourceTree = "<group>";
@@ -215,6 +244,8 @@
 		FA17712C23223F2E00CD682D /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				FA17715E2327945300CD682D /* UserApi */,
+				FA17712923223EB000CD682D /* PhotoAPI */,
 				FA17712D23223F3700CD682D /* Network.swift */,
 				FA1771322322411A00CD682D /* NetworkConfig.swift */,
 			);
@@ -224,6 +255,7 @@
 		FA17712F23223F6700CD682D /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
+				FA17715C2327941600CD682D /* AuthenticationUseCasePlatform.swift */,
 				FA17713023223F7000CD682D /* PhotoUseCasePlatform.swift */,
 				FA17713723224E7200CD682D /* UseCasesProviderPlatform.swift */,
 			);
@@ -256,8 +288,31 @@
 		FA177147232640C200CD682D /* Photo */ = {
 			isa = PBXGroup;
 			children = (
+				FA1771522327837F00CD682D /* PhotoViewModel.swift */,
+				FA1771542327854300CD682D /* PhotoNavigator.swift */,
+				FA1771562327882A00CD682D /* PhotoViewController.swift */,
+				FA1771572327882A00CD682D /* PhotoViewController.xib */,
 			);
 			path = Photo;
+			sourceTree = "<group>";
+		};
+		FA17715E2327945300CD682D /* UserApi */ = {
+			isa = PBXGroup;
+			children = (
+				FA17715F2327947C00CD682D /* UserProvider.swift */,
+			);
+			path = UserApi;
+			sourceTree = "<group>";
+		};
+		FA17716323279E0100CD682D /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				FA17716423279E0C00CD682D /* LoginNavigator.swift */,
+				FA17716623279E1300CD682D /* LoginViewModel.swift */,
+				FA17716823279E2100CD682D /* LoginViewController.swift */,
+				FA17716923279E2100CD682D /* LoginViewController.xib */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -321,6 +376,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA1771462326408700CD682D /* PhotosViewController.xib in Resources */,
+				FA1771592327882A00CD682D /* PhotoViewController.xib in Resources */,
+				FA17716B23279E2100CD682D /* LoginViewController.xib in Resources */,
 				FA17714B2326453600CD682D /* PhotoCollectionViewCell.xib in Resources */,
 				FA17710B2321F5A600CD682D /* LaunchScreen.storyboard in Resources */,
 				FA1771082321F5A600CD682D /* Assets.xcassets in Resources */,
@@ -381,22 +438,33 @@
 				FA17711C2322083D00CD682D /* Photo.swift in Sources */,
 				FA1771332322411A00CD682D /* NetworkConfig.swift in Sources */,
 				FA17714A2326453600CD682D /* PhotoCollectionViewCell.swift in Sources */,
+				FA1771532327837F00CD682D /* PhotoViewModel.swift in Sources */,
 				FA1771012321F5A500CD682D /* AppDelegate.swift in Sources */,
 				FA17713F2322570F00CD682D /* PhotosNavigator.swift in Sources */,
 				FA17714F2326526200CD682D /* KingFisherManage+Rx.swift in Sources */,
 				FA17713D232251F900CD682D /* PhotosViewModel.swift in Sources */,
 				FA17711E2322084200CD682D /* User.swift in Sources */,
+				FA17716223279D2900CD682D /* AccessToken.swift in Sources */,
+				FA17716A23279E2100CD682D /* LoginViewController.swift in Sources */,
+				FA1771602327947C00CD682D /* UserProvider.swift in Sources */,
 				FA1771282322366000CD682D /* UseCasesProvider.swift in Sources */,
 				FA1771242322183500CD682D /* UserProfileSource.swift in Sources */,
+				FA17716523279E0C00CD682D /* LoginNavigator.swift in Sources */,
 				FA17713823224E7200CD682D /* UseCasesProviderPlatform.swift in Sources */,
+				FA17716723279E1300CD682D /* LoginViewModel.swift in Sources */,
 				FA1771422322584700CD682D /* ViewModelType.swift in Sources */,
 				FA17714D2326524400CD682D /* Kingfisher+Rx.swift in Sources */,
 				FA1771262322360C00CD682D /* PhotoUseCase.swift in Sources */,
+				FA17715D2327941600CD682D /* AuthenticationUseCasePlatform.swift in Sources */,
 				FA17712223220B0500CD682D /* PhotoSource.swift in Sources */,
+				FA17715123275DE800CD682D /* PhotosError.swift in Sources */,
+				FA17715B232793BA00CD682D /* AuthenticationUseCase.swift in Sources */,
 				FA17712023220A2600CD682D /* PhotoAttribute.swift in Sources */,
+				FA1771552327854300CD682D /* PhotoNavigator.swift in Sources */,
 				FA17713B2322501800CD682D /* PhotosViewController.swift in Sources */,
 				FA17713123223F7000CD682D /* PhotoUseCasePlatform.swift in Sources */,
 				FA17712E23223F3700CD682D /* Network.swift in Sources */,
+				FA1771582327882A00CD682D /* PhotoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

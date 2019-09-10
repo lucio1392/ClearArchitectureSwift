@@ -10,6 +10,11 @@ import Foundation
 
 public final class UseCasesProviderPlatform: UseCasesProvider {
     
+    public func makeAuthenticationUseCaseProvider() -> AuthenticationUseCase {
+        return AuthenticationUseCasePlatform()
+    }
+    
+    
     public func makePhotoUseCaseProvider() -> PhotoUseCase {
         return PhotoUseCasePlatform()
     }
