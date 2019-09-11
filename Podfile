@@ -12,4 +12,5 @@ target 'Github Repository' do
     pod 'RxRealm'
     pod 'Kingfisher'
     pod 'RxSwiftExt'
+    pod 'RxWebKit'
 end

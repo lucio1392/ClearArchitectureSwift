@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import RxSwift
 
 protocol LoginNavigation {
     func toLoginURL()
@@ -19,6 +20,7 @@ final class LoginNavigator: LoginNavigation {
     
     private let useCaseProvider: UseCasesProvider
     private let navigationController: UINavigationController
+    private let authenCode: PublishSubject<String> = PublishSubject<String>()
     
     init(_ useCaseProvider: UseCasesProvider,
          navigationController: UINavigationController) {
@@ -27,11 +29,18 @@ final class LoginNavigator: LoginNavigation {
     }
     
     func toLoginURL() {
-        useCaseProvider.makeAuthenticationUseCaseProvider().redirectLogin()
+       let openAuthenticationNavigation = OpenAuthenticationNavigator(navigationController,
+                                                                      useCaseProvider: useCaseProvider,
+                                                                      authenCode: authenCode)
+        openAuthenticationNavigation.toOpenAuthentication()
     }
     
     func toLogin() {
-        
+        let loginViewModel = LoginViewModel(useCaseProvider.makeAuthenticationUseCaseProvider(),
+                                            loginNavigator: self,
+                                            authenCode: authenCode)
+        let loginViewController = LoginViewController(loginViewModel)
+        navigationController.pushViewController(loginViewController, animated: true)
     }
 }
 

@@ -9,7 +9,8 @@
 import Foundation
 import RxSwift
 
-public protocol AuthenticationUseCase {    
+public protocol AuthenticationUseCase {
+    var oauthRedirect: Observable<URLRequest> { get }
     func accessToken(code: String) -> Observable<AccessToken>
-    func redirectLogin()
+    func openAuthen(param: String, resultUrl: URL) -> Observable<String>     
 }

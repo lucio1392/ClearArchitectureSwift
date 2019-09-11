@@ -40,7 +40,7 @@ extension PhotoTarget: TargetType {
     
     var headers: [String : String]? {
         return ["Accept-Version": "v1",
-                "Authorization": "Client-ID \(NetworkConfig.secretKey)"]
+                "Authorization": "Client-ID \(NetworkConfig.accessKey)"]
     }
     
 }

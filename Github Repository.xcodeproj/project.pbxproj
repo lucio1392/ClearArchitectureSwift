@@ -46,7 +46,22 @@
 		FA17716723279E1300CD682D /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA17716623279E1300CD682D /* LoginViewModel.swift */; };
 		FA17716A23279E2100CD682D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA17716823279E2100CD682D /* LoginViewController.swift */; };
 		FA17716B23279E2100CD682D /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA17716923279E2100CD682D /* LoginViewController.xib */; };
+		FA17716F2328CF9700CD682D /* OpenAuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA17716D2328CF9700CD682D /* OpenAuthenticationViewController.swift */; };
+		FA1771702328CF9700CD682D /* OpenAuthenticationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA17716E2328CF9700CD682D /* OpenAuthenticationViewController.xib */; };
+		FA1771722328CFA600CD682D /* OpenAuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1771712328CFA600CD682D /* OpenAuthenticationViewModel.swift */; };
+		FA1771742328CFBC00CD682D /* OpenAuthenticationNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1771732328CFBC00CD682D /* OpenAuthenticationNavigator.swift */; };
+		FA17717C2328EF9700CD682D /* Github_RepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA17717B2328EF9700CD682D /* Github_RepositoryTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FA17717E2328EF9700CD682D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FA1770F52321F5A500CD682D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FA1770FC2321F5A500CD682D;
+			remoteInfo = "Github Repository";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		20CD79AA489553DA49CF1BC1 /* Pods-Github Repository.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Github Repository.release.xcconfig"; path = "Target Support Files/Pods-Github Repository/Pods-Github Repository.release.xcconfig"; sourceTree = "<group>"; };
@@ -92,6 +107,13 @@
 		FA17716623279E1300CD682D /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		FA17716823279E2100CD682D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		FA17716923279E2100CD682D /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		FA17716D2328CF9700CD682D /* OpenAuthenticationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAuthenticationViewController.swift; sourceTree = "<group>"; };
+		FA17716E2328CF9700CD682D /* OpenAuthenticationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OpenAuthenticationViewController.xib; sourceTree = "<group>"; };
+		FA1771712328CFA600CD682D /* OpenAuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAuthenticationViewModel.swift; sourceTree = "<group>"; };
+		FA1771732328CFBC00CD682D /* OpenAuthenticationNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAuthenticationNavigator.swift; sourceTree = "<group>"; };
+		FA1771792328EF9700CD682D /* Github RepositoryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Github RepositoryTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA17717B2328EF9700CD682D /* Github_RepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Github_RepositoryTests.swift; sourceTree = "<group>"; };
+		FA17717D2328EF9700CD682D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +122,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				976502A071B3DED30F3747CC /* Pods_Github_Repository.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA1771762328EF9700CD682D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -127,6 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				FA1770FF2321F5A500CD682D /* Github Repository */,
+				FA17717A2328EF9700CD682D /* Github RepositoryTests */,
 				FA1770FE2321F5A500CD682D /* Products */,
 				466ECCD0B5467382559D5926 /* Pods */,
 				7DCC9E061EBDDBE73AB18C4B /* Frameworks */,
@@ -137,6 +167,7 @@
 			isa = PBXGroup;
 			children = (
 				FA1770FD2321F5A500CD682D /* Github Repository.app */,
+				FA1771792328EF9700CD682D /* Github RepositoryTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -186,6 +217,7 @@
 		FA1771152321FEB600CD682D /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				FA17716C2328CF7E00CD682D /* OpenAuthentication */,
 				FA17716323279E0100CD682D /* Login */,
 				FA177147232640C200CD682D /* Photo */,
 				FA17713923224F7B00CD682D /* Photos */,
@@ -315,6 +347,26 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
+		FA17716C2328CF7E00CD682D /* OpenAuthentication */ = {
+			isa = PBXGroup;
+			children = (
+				FA1771732328CFBC00CD682D /* OpenAuthenticationNavigator.swift */,
+				FA1771712328CFA600CD682D /* OpenAuthenticationViewModel.swift */,
+				FA17716D2328CF9700CD682D /* OpenAuthenticationViewController.swift */,
+				FA17716E2328CF9700CD682D /* OpenAuthenticationViewController.xib */,
+			);
+			path = OpenAuthentication;
+			sourceTree = "<group>";
+		};
+		FA17717A2328EF9700CD682D /* Github RepositoryTests */ = {
+			isa = PBXGroup;
+			children = (
+				FA17717B2328EF9700CD682D /* Github_RepositoryTests.swift */,
+				FA17717D2328EF9700CD682D /* Info.plist */,
+			);
+			path = "Github RepositoryTests";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -337,6 +389,24 @@
 			productReference = FA1770FD2321F5A500CD682D /* Github Repository.app */;
 			productType = "com.apple.product-type.application";
 		};
+		FA1771782328EF9700CD682D /* Github RepositoryTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA1771822328EF9700CD682D /* Build configuration list for PBXNativeTarget "Github RepositoryTests" */;
+			buildPhases = (
+				FA1771752328EF9700CD682D /* Sources */,
+				FA1771762328EF9700CD682D /* Frameworks */,
+				FA1771772328EF9700CD682D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FA17717F2328EF9700CD682D /* PBXTargetDependency */,
+			);
+			name = "Github RepositoryTests";
+			productName = "Github RepositoryTests";
+			productReference = FA1771792328EF9700CD682D /* Github RepositoryTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -349,6 +419,10 @@
 				TargetAttributes = {
 					FA1770FC2321F5A500CD682D = {
 						CreatedOnToolsVersion = 10.3;
+					};
+					FA1771782328EF9700CD682D = {
+						CreatedOnToolsVersion = 10.3;
+						TestTargetID = FA1770FC2321F5A500CD682D;
 					};
 				};
 			};
@@ -366,6 +440,7 @@
 			projectRoot = "";
 			targets = (
 				FA1770FC2321F5A500CD682D /* Github Repository */,
+				FA1771782328EF9700CD682D /* Github RepositoryTests */,
 			);
 		};
 /* End PBXProject section */
@@ -376,11 +451,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA1771462326408700CD682D /* PhotosViewController.xib in Resources */,
+				FA1771702328CF9700CD682D /* OpenAuthenticationViewController.xib in Resources */,
 				FA1771592327882A00CD682D /* PhotoViewController.xib in Resources */,
 				FA17716B23279E2100CD682D /* LoginViewController.xib in Resources */,
 				FA17714B2326453600CD682D /* PhotoCollectionViewCell.xib in Resources */,
 				FA17710B2321F5A600CD682D /* LaunchScreen.storyboard in Resources */,
 				FA1771082321F5A600CD682D /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA1771772328EF9700CD682D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -433,6 +516,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA1771722328CFA600CD682D /* OpenAuthenticationViewModel.swift in Sources */,
 				FA1771442322592000CD682D /* Application.swift in Sources */,
 				FA17712B23223EF000CD682D /* PhotoProvider.swift in Sources */,
 				FA17711C2322083D00CD682D /* Photo.swift in Sources */,
@@ -451,6 +535,7 @@
 				FA1771242322183500CD682D /* UserProfileSource.swift in Sources */,
 				FA17716523279E0C00CD682D /* LoginNavigator.swift in Sources */,
 				FA17713823224E7200CD682D /* UseCasesProviderPlatform.swift in Sources */,
+				FA1771742328CFBC00CD682D /* OpenAuthenticationNavigator.swift in Sources */,
 				FA17716723279E1300CD682D /* LoginViewModel.swift in Sources */,
 				FA1771422322584700CD682D /* ViewModelType.swift in Sources */,
 				FA17714D2326524400CD682D /* Kingfisher+Rx.swift in Sources */,
@@ -461,6 +546,7 @@
 				FA17715B232793BA00CD682D /* AuthenticationUseCase.swift in Sources */,
 				FA17712023220A2600CD682D /* PhotoAttribute.swift in Sources */,
 				FA1771552327854300CD682D /* PhotoNavigator.swift in Sources */,
+				FA17716F2328CF9700CD682D /* OpenAuthenticationViewController.swift in Sources */,
 				FA17713B2322501800CD682D /* PhotosViewController.swift in Sources */,
 				FA17713123223F7000CD682D /* PhotoUseCasePlatform.swift in Sources */,
 				FA17712E23223F3700CD682D /* Network.swift in Sources */,
@@ -468,7 +554,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FA1771752328EF9700CD682D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA17717C2328EF9700CD682D /* Github_RepositoryTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FA17717F2328EF9700CD682D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FA1770FC2321F5A500CD682D /* Github Repository */;
+			targetProxy = FA17717E2328EF9700CD682D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		FA1771092321F5A600CD682D /* LaunchScreen.storyboard */ = {
@@ -603,8 +705,9 @@
 			baseConfigurationReference = C8115CAC212D44D3C03EA1C4 /* Pods-Github Repository.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = H9792V2Z4F;
 				INFOPLIST_FILE = "$(SRCROOT)/Github Repository/Application/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -623,8 +726,9 @@
 			baseConfigurationReference = 20CD79AA489553DA49CF1BC1 /* Pods-Github Repository.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = H9792V2Z4F;
 				INFOPLIST_FILE = "$(SRCROOT)/Github Repository/Application/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -635,6 +739,46 @@
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		FA1771802328EF9700CD682D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = H9792V2Z4F;
+				INFOPLIST_FILE = "Github RepositoryTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "lucio.Github-RepositoryTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Github Repository.app/Github Repository";
+			};
+			name = Debug;
+		};
+		FA1771812328EF9700CD682D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = H9792V2Z4F;
+				INFOPLIST_FILE = "Github RepositoryTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "lucio.Github-RepositoryTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Github Repository.app/Github Repository";
 			};
 			name = Release;
 		};
@@ -655,6 +799,15 @@
 			buildConfigurations = (
 				FA1771102321F5A600CD682D /* Debug */,
 				FA1771112321F5A600CD682D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FA1771822328EF9700CD682D /* Build configuration list for PBXNativeTarget "Github RepositoryTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA1771802328EF9700CD682D /* Debug */,
+				FA1771812328EF9700CD682D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

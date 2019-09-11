@@ -16,7 +16,7 @@ enum UserTarget {
 extension UserTarget: TargetType {
     
     var baseURL: URL {
-        return URL(string: NetworkConfig.baseUrl)!
+        return URL(string: NetworkConfig.loginBaseUrl)!
     }
     
     var path: String {

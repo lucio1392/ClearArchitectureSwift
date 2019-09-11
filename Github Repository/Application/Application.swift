@@ -17,21 +17,24 @@ final class Application: Applicationable {
     
     static let `default` = Application()
     
-    private let networkUsecaseProvider: UseCasesProvider
+    private let usecaseProvider: UseCasesProvider
     
     private init() {
-        self.networkUsecaseProvider = UseCasesProviderPlatform()
+        self.usecaseProvider = UseCasesProviderPlatform()
     }
     
     func configureMainInterface(window: UIWindow) {
         let photosNavigationController = UINavigationController()
         
-        let photosNavigator = PhotosNavigator(networkUsecaseProvider,
-                                             navigationController: photosNavigationController)
+//        let photosNavigator = PhotosNavigator(usecaseProvider,
+//                                             navigationController: photosNavigationController)
+        
+        let loginNavigator = LoginNavigator(usecaseProvider, navigationController: photosNavigationController)
 
         window.rootViewController = photosNavigationController
         window.makeKeyAndVisible()
-        photosNavigator.toPhotos()
+        loginNavigator.toLogin()
+//        photosNavigator.toPhotos()
     }
     
 }

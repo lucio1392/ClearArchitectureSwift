@@ -10,9 +10,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="Github_Repository" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OpenAuthenticationViewController" customModule="Github_Repository" customModuleProvider="target">
             <connections>
-                <outlet property="loginButton" destination="MyH-vK-UwU" id="Fdb-24-6Jb"/>
+                <outlet property="authenWebkit" destination="EUf-H5-pbH" id="Jr9-XX-bRZ"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -21,15 +21,21 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MyH-vK-UwU">
-                    <rect key="frame" x="188" y="433" width="38" height="30"/>
-                    <state key="normal" title="Login"/>
-                </button>
+                <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EUf-H5-pbH">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <wkWebViewConfiguration key="configuration">
+                        <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                        <wkPreferences key="preferences"/>
+                    </wkWebViewConfiguration>
+                </wkWebView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="MyH-vK-UwU" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="FRB-Dr-Sva"/>
-                <constraint firstItem="MyH-vK-UwU" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="l4z-PI-lbE"/>
+                <constraint firstItem="EUf-H5-pbH" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="8Lf-g5-hip"/>
+                <constraint firstItem="EUf-H5-pbH" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="D6o-9g-bah"/>
+                <constraint firstItem="EUf-H5-pbH" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="KR4-gB-Jmz"/>
+                <constraint firstItem="EUf-H5-pbH" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="fw3-rC-XVg"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
         </view>
