@@ -13,4 +13,9 @@ target 'Github Repository' do
     pod 'Kingfisher'
     pod 'RxSwiftExt'
     pod 'RxWebKit'
+    
+    target 'Github RepositoryTests' do
+      pod 'RxTest'
+      pod 'RxBlocking'
+    end
 end

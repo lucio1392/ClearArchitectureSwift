@@ -1,0 +1,15 @@
+output: docs/
+clean: true
+objc: false
+sdk: iphonesimulator
+author: EstRouge
+# author_url:
+# github_url:
+# github_file_prefix:
+skip_undocumented: false
+hide_documentation_coverage: true
+min_acl: private
+theme: fullwidth
+title: SaleSDK
+copyright: Copyright - EstRouge Mobile Team
+module_version: 1.0.0

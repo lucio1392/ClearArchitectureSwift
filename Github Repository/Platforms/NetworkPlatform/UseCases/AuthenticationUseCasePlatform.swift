@@ -30,20 +30,24 @@ final class AuthenticationUseCasePlatform: AuthenticationUseCase {
         return Observable.create { observer in
             
             guard let components = URLComponents(url: resultUrl, resolvingAgainstBaseURL: false) else {
-                observer.onCompleted()
                 return Disposables.create()
             }
             guard let queryItems = components.queryItems else {
-                observer.onCompleted()
                 return Disposables.create()
             }
             
             let finalAuthen = queryItems.filter { item in item.name == param }.first?.value
             
-            observer.onNext(finalAuthen ?? "")
+            guard let finalAuthenCode = finalAuthen else {
+                return Disposables.create()
+            }
+            
+            observer.onNext(finalAuthenCode)
             
             return Disposables.create()
         }
     }
     
 }
+
+

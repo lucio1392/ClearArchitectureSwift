@@ -21,3 +21,7 @@ public struct AccessToken: Decodable {
         case createdAt = "created_at"
     }
 }
+
+extension AccessToken: Equatable {
+    
+}
