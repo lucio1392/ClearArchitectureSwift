@@ -12,7 +12,7 @@ import RxSwift
 import RxBlocking
 import RxTest
 
-@testable import Github_Repository
+@testable import PhotoSDK
 
 final class AuthenticationUseCaseMockup: AuthenticationUseCase {
     

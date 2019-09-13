@@ -10,9 +10,12 @@ import Foundation
 import RxSwift
 import Moya
 
+
+
 final class Network<T, E> where E: TargetType, T: Decodable {
     
     private let networkProvider: MoyaProvider<E> = MoyaProvider<E>(plugins: [NetworkLoggerPlugin(verbose: true)])
+    
     
     func getItems(_ endPoint: E) -> Observable<[T]> {
         
