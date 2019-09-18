@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>PhotoSDK  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset="utf-8">
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+    <script src="js/lunr.min.js" defer></script>
+    <script src="js/typeahead.jquery.js" defer></script>
+    <script src="js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+
+
+    <a title="PhotoSDK  Reference"></a>
+
+    <header class="header">
+      <p class="header-col header-col--primary">
+        <a class="header-link" href="index.html">
+          PhotoSDK Docs
+        </a>
+         (17% documented)
+      </p>
+    
+      <p class="header-col--secondary">
+        <form role="search" action="search.json">
+          <input type="text" placeholder="Search documentation" data-typeahead>
+        </form>
+      </p>
+    
+    
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="index.html">PhotoSDK Reference</a>
+      <img class="carat" src="img/carat.png" />
+      PhotoSDK  Reference
+    </p>
+
+    <div class="content-wrapper">
+      <nav class="navigation">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Gettings Started.html">Gettings Started</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="gettings-started.html">Gettings Started</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Domain Provider.html">Domain Provider</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/UseCasesProviderPlatform.html">UseCasesProviderPlatform</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Domain Usecases.html">Domain Usecases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/AuthenticationUseCase.html">AuthenticationUseCase</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/PhotoUseCase.html">PhotoUseCase</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/UseCasesProvider.html">UseCasesProvider</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Domain Models.html">Domain Models</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Domain Models.html#/s:8PhotoSDK11AccessTokenV">AccessToken</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/Photo.html">Photo</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/PhotoAttribute.html">PhotoAttribute</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/PhotoSource.html">PhotoSource</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/PhotosError.html">PhotosError</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/User.html">User</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Domain Models.html#/s:8PhotoSDK17UserProfileSourceV">UserProfileSource</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Common Extensions.html">Common Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Extensions/KingfisherManager.html">KingfisherManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Extensions/ObservableType.html">ObservableType</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Extensions/Reactive.html">Reactive</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+
+        <section class="section">
+          <div class="section-content">
+            
+            <h1 id='strong-create-documentation-using-jazzy-strong' class='heading'><strong>Create documentation using Jazzy 📃📃</strong></h1>
+<h4 id='table-content' class='heading'>Table content:</h4>
+
+<ol>
+<li><a href="#Install%60Jazzy%60">Install <code>Jazzy</code>.</a></li>
+<li><a href="#configuration">Configuration using <code>.jazzy.yaml</code> file.</a></li>
+<li><a href="#documentsourcecode">Document your <code>source code</code>.</a></li>
+<li><a href="#upload">Upload to <code>host</code>.</a></li>
+</ol>
+
+<hr>
+<h4 id='1-install-code-jazzy-code-a-name-install-jazzy-a' class='heading'>1. Install <code>Jazzy</code><a name="Install`Jazzy`"></a></h4>
+
+<ul>
+<li><p>Open terminal and run <code>[sudo] gem install jazzy</code>.</p>
+<pre class="highlight plaintext"><code>If your got any problems during install Jazzy please refer by the link below:
+https://github.com/realm/jazzy#installation-problems
+</code></pre></li>
+<li><p>After finish above step please go to your root project directory and then run: <code>jazzy</code> without any arguments for start creating your document.</p></li>
+</ul>
+
+<p>( You can try to verify <code>xcodebuild</code> first, if everything going well then your <code>jazzy</code> command should succeed too )</p>
+
+<ul>
+<li><p><code>Jazzy</code> will start building and give you the following report like the image below (If everything succeed):</p>
+
+<!-- Import image here --></li>
+<li><p><code>Jazzy</code> will create the <code>docs</code> folder by default. It&rsquo;s contains all the source to create our document. You can try to run the <code>index.html</code> to get the result.</p>
+
+<!-- Import image here --></li>
+<li><p>You can config your <code>jazzy</code> build options in configuration file <code>.jazzy.yaml</code> ( We take this step in next section ). All config options available and can check by following command <code>jazzy --help config</code></p></li>
+</ul>
+<h4 id='2-configuration-using-code-jazzy-yaml-code-file-a-name-configuration-a' class='heading'>2. Configuration using <code>.jazzy.yaml</code> file. <a name="configuration"></a></h4>
+
+<p><code>Jazzy</code> support us with many of configuration options to build our document. Below is some simple and common options that we will use to config and customize our document:</p>
+
+<ul>
+<li><p>Create <code>.jazzy.yaml</code> in your root project directory</p></li>
+<li><p>Put the config content below into <code>.jazzy.yaml</code> you just created.</p></li>
+</ul>
+<pre class="highlight yaml"><code>  <span class="na">clean</span><span class="pi">:</span> <span class="s">true</span> <span class="c1">#Clean everything before generate new docs</span>
+
+  <span class="na">module</span><span class="pi">:</span> <span class="s">PhotoSDK</span> <span class="c1">#Project module name. You can find this module name from your project's Building Setting at Product Module Name field.</span>
+
+  <span class="na">theme</span><span class="pi">:</span> <span class="s">fullwidth</span> <span class="c1">#Choose your theme. Jazzy support 3 default theme following Apple, Fullwidth, Jony</span>
+
+  <span class="na">skip_undocumented</span><span class="pi">:</span> <span class="s">false</span> <span class="c1">#Skip everything in your source code that not documented yet</span>
+
+  <span class="na">readme</span><span class="pi">:</span> <span class="s">README.md</span> <span class="c1">#README file name</span>
+
+  <span class="na">output</span><span class="pi">:</span> <span class="s">docs/SaleSDKInterfaceDocument</span> <span class="c1">#Where you want to put your document</span>
+
+  <span class="na">min_acl</span><span class="pi">:</span> <span class="s">public</span> <span class="c1">#Access Control level to document (private/ fileprivate/ internal/ public)</span>
+
+  <span class="na">documentation</span><span class="pi">:</span> <span class="s">Documentation/*.md</span> <span class="c1">#The folder to get your markdown's documents</span>
+
+  <span class="na">undocumented_text</span><span class="pi">:</span> <span class="s">Document for this field will be update soon 😍😍😍</span> <span class="c1">#Custom undocumented description text</span>
+
+  <span class="na">hide_documentation_coverage</span><span class="pi">:</span> <span class="s">false</span>
+
+  <span class="na">sdk</span><span class="pi">:</span> <span class="s">iphone</span> <span class="c1">#The SDK you should use for building your document (iphone,watch,appletv)</span>
+  <span class="na">xcodebuild_arguments</span><span class="pi">:</span> <span class="c1">#Support build with xcodebuild, so you can modify your xcodebuild's arguments</span>
+    <span class="pi">-</span> <span class="s">-workspace</span>
+    <span class="pi">-</span> <span class="s">Github Repository.xcworkspace</span>
+    <span class="pi">-</span> <span class="s">-scheme</span>
+    <span class="pi">-</span> <span class="s">Github Repository</span>
+  <span class="na">author</span><span class="pi">:</span> <span class="s">Est Rouge Mobile Team</span>
+  <span class="na">author_url</span><span class="pi">:</span> <span class="s">https://est-rouge.com/</span>
+  <span class="na">custom_categories</span><span class="pi">:</span> <span class="c1">#Custom category help you to arrange and replace the default order from Jazzy.</span>
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Gettings Started</span>
+      <span class="na">children</span><span class="pi">:</span>
+        <span class="pi">-</span> <span class="s">Gettings Started</span>
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Domain Provider</span>
+      <span class="na">children</span><span class="pi">:</span>
+        <span class="pi">-</span> <span class="s">UseCasesProviderPlatform</span>
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Domain Usecases</span>
+      <span class="na">children</span><span class="pi">:</span>
+        <span class="pi">-</span> <span class="s">AuthenticationUseCase</span>
+        <span class="pi">-</span> <span class="s">PhotoUseCase</span>
+        <span class="pi">-</span> <span class="s">UseCasesProvider</span>
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Domain Models</span>
+      <span class="na">children</span><span class="pi">:</span>
+        <span class="pi">-</span> <span class="s">AccessToken</span>
+        <span class="pi">-</span> <span class="s">Photo</span>
+        <span class="pi">-</span> <span class="s">PhotoAttribute</span>
+        <span class="pi">-</span> <span class="s">PhotoSource</span>
+        <span class="pi">-</span> <span class="s">PhotosError</span>
+        <span class="pi">-</span> <span class="s">User</span>
+        <span class="pi">-</span> <span class="s">UserProfileSource</span>
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Common Extensions</span>
+      <span class="na">children</span><span class="pi">:</span>
+        <span class="pi">-</span> <span class="s">KingfisherManager</span>
+        <span class="pi">-</span> <span class="s">ObservableType</span>
+        <span class="pi">-</span> <span class="s">Reactive</span>
+</code></pre>
+
+<p>For more config options and their use please run <code>jazzy --help config</code> command.</p>
+
+<p>Beside config with <code>jazzy.yaml</code> you can attach the arguments when running <code>jazzy</code> command. ex: <code>jazzy --theme=jony</code>.</p>
+
+<p>You can also create some <code>Makefile</code> to help your life more easier.
+ex:</p>
+<pre class="highlight make"><code><span class="nl">documentation</span><span class="o">:</span>
+	<span class="p">@</span>jazzy <span class="se">\</span>
+	            --clean <span class="o">[</span>yes] <span class="se">\</span>
+	            --copyright <span class="s1">'Copyright - EstRouge Mobile Team'</span> <span class="se">\</span>
+	    --min-acl public <span class="se">\</span>
+	    --no-hide-documentation-coverage <span class="se">\</span>
+	    --theme fullwidth <span class="se">\</span>
+	    --output ./docs/public_api_document <span class="se">\</span>
+	            --documentation<span class="o">=</span>./<span class="k">*</span>.md <span class="se">\</span>
+	            --module <span class="s1">'PhotoSDK'</span> <span class="se">\</span>
+	            --author <span class="s1">'EstRouge Mobile Team'</span>
+	            <span class="p">@</span>rm -rf ./build
+
+
+<span class="nl">documentationSdk</span><span class="o">:</span>
+	                <span class="p">@</span>jazzy <span class="se">\</span>
+	                    --min-acl internal <span class="se">\</span>
+	                    --no-hide-documentation-coverage <span class="se">\</span>
+	                    --theme fullwidth <span class="se">\</span>
+	                    --output ./docs/sdk_document <span class="se">\</span>
+	                    --documentation<span class="o">=</span>./<span class="k">*</span>.md
+	                            <span class="p">@</span>rm -rf ./build
+</code></pre>
+<h4 id='3-document-your-code-source-code-code-a-name-documentsourcecode-a' class='heading'>3. Document your <code>source code</code>.<a name="documentsourcecode"></a></h4>
+
+<ul>
+<li>As we know that <code>XCode</code> support for <code>Markup</code> that including <code>Markdown</code> for documentation our source. <code>Jazzy</code> support to generate everything that we comment and document in our codebase.</li>
+</ul>
+
+<p>Please take a look as example below:</p>
+<pre class="highlight swift"><code><span class="c1">/// Authentication flow Interface.</span>
+<span class="c1">///</span>
+<span class="c1">/// This interface describe the full flow follwing OAUTH 2.0 protocol to get a User's AccessToken</span>
+<span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">AuthenticationUseCase</span> <span class="p">{</span>
+
+    <span class="c1">/// The Url request to redirect to login page for authentication</span>
+    <span class="k">var</span> <span class="nv">oauthRedirect</span><span class="p">:</span> <span class="kt">Observable</span><span class="o">&lt;</span><span class="kt">URLRequest</span><span class="o">&gt;</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span>
+
+    <span class="c1">/// Return an Access Token after request</span>
+    <span class="c1">///</span>
+    <span class="c1">/// - Parameter code: The Code returned from **Open Authen** process</span>
+    <span class="c1">/// - Returns: Return an Access Token after request</span>
+    <span class="kd">func</span> <span class="nf">accessToken</span><span class="p">(</span><span class="nv">code</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Observable</span><span class="o">&lt;</span><span class="kt">AccessToken</span><span class="o">&gt;</span>
+
+
+    <span class="c1">/// Detect the authen code after **Login Process**</span>
+    <span class="c1">///</span>
+    <span class="c1">/// - Parameters:</span>
+    <span class="c1">///   - param: Param want to get the value</span>
+    <span class="c1">///   - resultUrl: the redirect URI return from result</span>
+    <span class="c1">/// - Returns: Value Code for get **Access Token**</span>
+    <span class="kd">func</span> <span class="nf">openAuthen</span><span class="p">(</span><span class="nv">param</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">resultUrl</span><span class="p">:</span> <span class="kt">URL</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Observable</span><span class="o">&lt;</span><span class="kt">String</span><span class="o">&gt;</span>
+<span class="p">}</span>
+</code></pre>
+<h4 id='4-upload-to-code-host-code-a-name-upload-a' class='heading'>4. Upload to <code>host</code>.<a name="upload"></a></h4>
+
+          </div>
+        </section>
+
+
+      </article>
+    </div>
+    <section class="footer">
+      <p>&copy; 2019 <a class="link" href="https://est-rouge.com/" target="_blank" rel="external">Est Rouge Mobile Team</a>. All rights reserved. (Last updated: 2019-09-18)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.10.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+    </section>
+  </body>
+</div>
+</html>

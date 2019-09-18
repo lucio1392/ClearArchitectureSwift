@@ -1,0 +1,54 @@
+  clean: true #Clean everything before generate new docs
+
+  module: PhotoSDK #Project module name. You can find this module name from your project's Building Setting at Product Module Name field.
+
+  theme: fullwidth #Choose your theme. Jazzy support 3 default theme following Apple, Fullwidth, Jony
+
+  skip_undocumented: false #Skip everything in your source code that not documented yet
+
+  readme: README.md #README file name
+
+  output: docs/SaleSDKInterfaceDocument #Where you want to put your document
+
+  min_acl: public #Access Control level to document (private/ fileprivate/ internal/ public)
+
+  documentation: Documentation/*.md #The folder to get your markdown's documents
+
+  undocumented_text: Document for this field will be update soon 😍😍😍 #Custom undocumented description text
+
+  hide_documentation_coverage: false
+
+  sdk: iphone #The SDK you should use for building your document (iphone,watch,appletv)
+  xcodebuild_arguments: #Support build with xcodebuild, so you can modify your xcodebuild's arguments
+    - -workspace
+    - Github Repository.xcworkspace
+    - -scheme
+    - Github Repository
+  author: Est Rouge Mobile Team
+  author_url: https://est-rouge.com/
+  custom_categories: #Custom category help you to arrange and replace the default order from Jazzy.
+    - name: Gettings Started
+      children:
+        - Gettings Started
+    - name: Domain Provider
+      children:
+        - UseCasesProviderPlatform
+    - name: Domain Usecases
+      children:
+        - AuthenticationUseCase
+        - PhotoUseCase
+        - UseCasesProvider
+    - name: Domain Models
+      children:
+        - AccessToken
+        - Photo
+        - PhotoAttribute
+        - PhotoSource
+        - PhotosError
+        - User
+        - UserProfileSource
+    - name: Common Extensions
+      children:
+        - KingfisherManager
+        - ObservableType
+        - Reactive
