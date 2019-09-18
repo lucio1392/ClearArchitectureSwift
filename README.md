@@ -21,14 +21,11 @@
   ( You can try to verify `xcodebuild` first, if everything going well then your `jazzy` command should succeed too )
 
   * `Jazzy` will start building and give you the following report like the image below (If everything succeed):
-<!-- Import image here -->
-
-  ![](images_docs/4.png)
+  ![](https://raw.githubusercontent.com/lucio1392/ClearArchitectureSwift/master/images_docs/4.png)
 
   * `Jazzy` will create the `docs` folder by default. It's contains all the source to create our document. You can try to run the `index.html` to get the result.
-<!-- Import image here -->
 
-![](images_docs/3.png)
+![](https://raw.githubusercontent.com/lucio1392/ClearArchitectureSwift/master/images_docs/3.png)
 
   * You can config your `jazzy` build options in configuration file `.jazzy.yaml` ( We take this step in next section ). All config options available and can check by following command `jazzy --help config`
 
@@ -162,8 +159,8 @@ public protocol AuthenticationUseCase {
 
 ```
 * `Jazzy` will generate everything like below (depend on your template) with all of your comments and documents from your source code:
-<!-- Import image here -->
-![](images_docs/6.png)
+
+![](https://raw.githubusercontent.com/lucio1392/ClearArchitectureSwift/master/images_docs/6.png)
 * Please refer following docs to learn how to document your source code using `Markup` and `Markdown`:
 
   * https://developer.apple.com/library/archive/documentation/Xcode/Reference/xcode_markup_formatting_ref/
@@ -182,7 +179,7 @@ public protocol AuthenticationUseCase {
 
 * `Jazzy` also generate the `.docset` file for integrate with supported app like `Dash`. 😊
 
-![](images_docs/1.png)
+![](https://raw.githubusercontent.com/lucio1392/ClearArchitectureSwift/master/images_docs/1.png)
 
 * Please refer to https://github.com/realm/jazzy for more information.
 
@@ -190,4 +187,4 @@ public protocol AuthenticationUseCase {
 
   https://lucio1392.github.io/ClearArchitectureSwift/
 
-  ![](images_docs/2.png)
+  ![](https://raw.githubusercontent.com/lucio1392/ClearArchitectureSwift/master/images_docs/2.png)
