@@ -127,7 +127,8 @@
 <li><a href="#Install%60Jazzy%60">Install <code>Jazzy</code>.</a></li>
 <li><a href="#configuration">Configuration using <code>.jazzy.yaml</code> file.</a></li>
 <li><a href="#documentsourcecode">Document your <code>source code</code>.</a></li>
-<li><a href="#upload">Upload to <code>host</code>.</a></li>
+<li><a href="#upload">Upload to document.</a></li>
+<li><a href="#note">Note</a></li>
 </ol>
 
 <hr>
@@ -144,13 +145,21 @@ https://github.com/realm/jazzy#installation-problems
 <p>( You can try to verify <code>xcodebuild</code> first, if everything going well then your <code>jazzy</code> command should succeed too )</p>
 
 <ul>
-<li><p><code>Jazzy</code> will start building and give you the following report like the image below (If everything succeed):</p>
+<li><code>Jazzy</code> will start building and give you the following report like the image below (If everything succeed):
+&lt;!&ndash; Import image here &ndash;&gt;</li>
+</ul>
 
-<!-- Import image here --></li>
-<li><p><code>Jazzy</code> will create the <code>docs</code> folder by default. It&rsquo;s contains all the source to create our document. You can try to run the <code>index.html</code> to get the result.</p>
+<p><img src="images_docs/4.png" alt=""></p>
 
-<!-- Import image here --></li>
-<li><p>You can config your <code>jazzy</code> build options in configuration file <code>.jazzy.yaml</code> ( We take this step in next section ). All config options available and can check by following command <code>jazzy --help config</code></p></li>
+<ul>
+<li><code>Jazzy</code> will create the <code>docs</code> folder by default. It&rsquo;s contains all the source to create our document. You can try to run the <code>index.html</code> to get the result.
+&lt;!&ndash; Import image here &ndash;&gt;</li>
+</ul>
+
+<p><img src="images_docs/3.png" alt=""></p>
+
+<ul>
+<li>You can config your <code>jazzy</code> build options in configuration file <code>.jazzy.yaml</code> ( We take this step in next section ). All config options available and can check by following command <code>jazzy --help config</code></li>
 </ul>
 <h4 id='2-configuration-using-code-jazzy-yaml-code-file-a-name-configuration-a' class='heading'>2. Configuration using <code>.jazzy.yaml</code> file. <a name="configuration"></a></h4>
 
@@ -279,9 +288,9 @@ ex:</p>
 </code></pre>
 
 <ul>
-<li><p><code>Jazzy</code> will generate everything like below (depend on your template):</p>
-
-<!-- Import image here --></li>
+<li><code>Jazzy</code> will generate everything like below (depend on your template) with all of your comments and documents from your source code:
+&lt;!&ndash; Import image here &ndash;&gt;
+<img src="images_docs/6.png" alt=""></li>
 <li><p>Please refer following docs to learn how to document your source code using <code>Markup</code> and <code>Markdown</code>:</p>
 
 <ul>
@@ -289,7 +298,30 @@ ex:</p>
 <li><a href="https://books.apple.com/us/book/swift-documentation-markup/id1049010423">https://books.apple.com/us/book/swift-documentation-markup/id1049010423</a></li>
 </ul></li>
 </ul>
-<h4 id='4-upload-to-code-host-code-a-name-upload-a' class='heading'>4. Upload to <code>host</code>.<a name="upload"></a></h4>
+<h4 id='4-upload-your-document-a-name-upload-a' class='heading'>4. Upload your document.<a name="upload"></a></h4>
+
+<ul>
+<li>You can deploy your <code>Jazzy</code> documents for example to <code>Github Pages</code>. Please refer the link below:</li>
+</ul>
+
+<p><a href="https://help.github.com/en/articles/configuring-a-publishing-source-for-github-pages">https://help.github.com/en/articles/configuring-a-publishing-source-for-github-pages</a></p>
+<h4 id='5-note-a-name-note-a' class='heading'>5. Note.<a name="note"></a></h4>
+
+<ul>
+<li><p><code>Jazzy</code> will warning us if it find any <code>Generic</code> type during build time. Just ignore these warning.</p></li>
+<li><p><code>Jazzy</code> also generate the <code>.docset</code> file for integrate with supported app like <code>Dash</code>. 😊</p></li>
+</ul>
+
+<p><img src="images_docs/1.png" alt=""></p>
+
+<ul>
+<li><p>Please refer to <a href="https://github.com/realm/jazzy">https://github.com/realm/jazzy</a> for more information.</p></li>
+<li><p>Demo:</p></li>
+</ul>
+
+<p><a href="https://lucio1392.github.io/ClearArchitectureSwift/">https://lucio1392.github.io/ClearArchitectureSwift/</a></p>
+
+<p><img src="images_docs/2.png" alt=""></p>
 
           </div>
         </section>

@@ -4,7 +4,8 @@
   1. [Install `Jazzy`.](#Install`Jazzy`)
   2. [Configuration using `.jazzy.yaml` file.](#configuration)
   3. [Document your `source code`.](#documentsourcecode)
-  4. [Upload to `host`.](#upload)
+  4. [Upload to document.](#upload)
+  5. [Note](#note)
 
   ---------------------------------------
 
@@ -22,8 +23,12 @@
   * `Jazzy` will start building and give you the following report like the image below (If everything succeed):
 <!-- Import image here -->
 
+  ![](images_docs/4.png)
+
   * `Jazzy` will create the `docs` folder by default. It's contains all the source to create our document. You can try to run the `index.html` to get the result.
 <!-- Import image here -->
+
+![](images_docs/3.png)
 
   * You can config your `jazzy` build options in configuration file `.jazzy.yaml` ( We take this step in next section ). All config options available and can check by following command `jazzy --help config`
 
@@ -156,13 +161,33 @@ public protocol AuthenticationUseCase {
 }
 
 ```
-* `Jazzy` will generate everything like below (depend on your template):
+* `Jazzy` will generate everything like below (depend on your template) with all of your comments and documents from your source code:
 <!-- Import image here -->
-
+![](images_docs/6.png)
 * Please refer following docs to learn how to document your source code using `Markup` and `Markdown`:
 
   * https://developer.apple.com/library/archive/documentation/Xcode/Reference/xcode_markup_formatting_ref/
 
   * https://books.apple.com/us/book/swift-documentation-markup/id1049010423
 
-#### 4. Upload to `host`.<a name="upload"></a>
+#### 4. Upload your document.<a name="upload"></a>
+
+* You can deploy your `Jazzy` documents for example to `Github Pages`. Please refer the link below:
+
+  https://help.github.com/en/articles/configuring-a-publishing-source-for-github-pages
+
+#### 5. Note.<a name="note"></a>
+
+* `Jazzy` will warning us if it find any `Generic` type during build time. Just ignore these warning.
+
+* `Jazzy` also generate the `.docset` file for integrate with supported app like `Dash`. 😊
+
+![](images_docs/1.png)
+
+* Please refer to https://github.com/realm/jazzy for more information.
+
+* Demo:
+
+  https://lucio1392.github.io/ClearArchitectureSwift/
+
+  ![](images_docs/2.png)
