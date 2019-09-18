@@ -8,7 +8,7 @@
 
   readme: README.md #README file name
 
-  output: docs/SaleSDKInterfaceDocument #Where you want to put your document
+  output: docs/ #Where you want to put your document
 
   min_acl: public #Access Control level to document (private/ fileprivate/ internal/ public)
 

@@ -128,7 +128,7 @@ documentationSdk:
 
 * As we know that `XCode` support for `Markup` that including `Markdown` for documentation our source. `Jazzy` support to generate everything that we comment and document in our codebase.
 
-Please take a look as example below:
+Please take a look at example below:
 
 ```swift
 /// Authentication flow Interface.
