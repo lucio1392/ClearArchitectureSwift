@@ -10,31 +10,41 @@ import Foundation
 import UIKit
 
 protocol Applicationable {
-    func configureMainInterface(window: UIWindow)
+    func configSDK(window: UIWindow)
+    func openLogin()
+    func openPhotos()
 }
 
 final class Application: Applicationable {
-    
-    static let `default` = Application()
-    
-    private let usecaseProvider: UseCasesProvider
-    
-    private init() {
-        self.usecaseProvider = UseCasesProviderPlatform()
-    }
-    
-    func configureMainInterface(window: UIWindow) {
-        let photosNavigationController = UINavigationController()
-        
-//        let photosNavigator = PhotosNavigator(usecaseProvider,
-//                                             navigationController: photosNavigationController)
-        
-        let loginNavigator = LoginNavigator(usecaseProvider, navigationController: photosNavigationController)
 
-        window.rootViewController = photosNavigationController
-        window.makeKeyAndVisible()
-        loginNavigator.toLogin()
-//        photosNavigator.toPhotos()
+    private var window: UIWindow!
+
+    private var currentComponent: ComponentCoordinator?
+
+    private let useCaseProvider: UseCasesProvider = UseCasesProviderPlatform()
+
+    func configSDK(window: UIWindow) {
+        self.window = window
     }
-    
+
+    func openLogin() {
+        let loginComponentCoordinator = LoginComponentCoordinator(self.window)        
+        loginComponentCoordinator.delegate = self
+        let loginViewModel = LoginViewModel(useCaseProvider.makeAuthenticationUseCaseProvider(), loginCoordinator: loginComponentCoordinator)
+        loginComponentCoordinator.transition(to: LoginScene.login(loginViewModel), type: .root, component: loginComponentCoordinator)
+        currentComponent = loginComponentCoordinator
+    }
+
+    func openPhotos() {
+
+    }
+
+}
+
+extension Application: LoginComponentDelegate {
+
+    func didLogin() {
+        print("Did Login")
+    }
+
 }

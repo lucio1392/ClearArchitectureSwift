@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		65CF969723373985008C090F /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65CF969623373985008C090F /* Coordinator.swift */; };
+		65CF969D2337601B008C090F /* LoginComponentCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65CF969C2337601B008C090F /* LoginComponentCoordinator.swift */; };
+		65CF969F23376040008C090F /* BaseComponentCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65CF969E23376040008C090F /* BaseComponentCoordinator.swift */; };
+		65CF96A12337C5C5008C090F /* PhotosComponentCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65CF96A02337C5C5008C090F /* PhotosComponentCoordinator.swift */; };
 		976502A071B3DED30F3747CC /* Pods_Github_Repository.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D311B33B04F9218BF013F83B /* Pods_Github_Repository.framework */; };
 		A41A04C5209852ED590E289D /* Pods_Github_Repository_Github_RepositoryTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5A69AF7C7E14065BDC29A63 /* Pods_Github_Repository_Github_RepositoryTests.framework */; };
 		FA1771012321F5A500CD682D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1771002321F5A500CD682D /* AppDelegate.swift */; };
@@ -43,14 +47,12 @@
 		FA17715D2327941600CD682D /* AuthenticationUseCasePlatform.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA17715C2327941600CD682D /* AuthenticationUseCasePlatform.swift */; };
 		FA1771602327947C00CD682D /* UserProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA17715F2327947C00CD682D /* UserProvider.swift */; };
 		FA17716223279D2900CD682D /* AccessToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA17716123279D2900CD682D /* AccessToken.swift */; };
-		FA17716523279E0C00CD682D /* LoginNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA17716423279E0C00CD682D /* LoginNavigator.swift */; };
 		FA17716723279E1300CD682D /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA17716623279E1300CD682D /* LoginViewModel.swift */; };
 		FA17716A23279E2100CD682D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA17716823279E2100CD682D /* LoginViewController.swift */; };
 		FA17716B23279E2100CD682D /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA17716923279E2100CD682D /* LoginViewController.xib */; };
 		FA17716F2328CF9700CD682D /* OpenAuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA17716D2328CF9700CD682D /* OpenAuthenticationViewController.swift */; };
 		FA1771702328CF9700CD682D /* OpenAuthenticationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA17716E2328CF9700CD682D /* OpenAuthenticationViewController.xib */; };
 		FA1771722328CFA600CD682D /* OpenAuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1771712328CFA600CD682D /* OpenAuthenticationViewModel.swift */; };
-		FA1771742328CFBC00CD682D /* OpenAuthenticationNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1771732328CFBC00CD682D /* OpenAuthenticationNavigator.swift */; };
 		FA17717C2328EF9700CD682D /* OpenAuthenticationViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA17717B2328EF9700CD682D /* OpenAuthenticationViewModelTest.swift */; };
 		FA96D95E2329FA0A0089AB04 /* LoginViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA96D95D2329FA0A0089AB04 /* LoginViewModelTest.swift */; };
 /* End PBXBuildFile section */
@@ -67,6 +69,10 @@
 
 /* Begin PBXFileReference section */
 		20CD79AA489553DA49CF1BC1 /* Pods-Github Repository.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Github Repository.release.xcconfig"; path = "Target Support Files/Pods-Github Repository/Pods-Github Repository.release.xcconfig"; sourceTree = "<group>"; };
+		65CF969623373985008C090F /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		65CF969C2337601B008C090F /* LoginComponentCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginComponentCoordinator.swift; sourceTree = "<group>"; };
+		65CF969E23376040008C090F /* BaseComponentCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseComponentCoordinator.swift; sourceTree = "<group>"; };
+		65CF96A02337C5C5008C090F /* PhotosComponentCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosComponentCoordinator.swift; sourceTree = "<group>"; };
 		C8115CAC212D44D3C03EA1C4 /* Pods-Github Repository.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Github Repository.debug.xcconfig"; path = "Target Support Files/Pods-Github Repository/Pods-Github Repository.debug.xcconfig"; sourceTree = "<group>"; };
 		C9C08185882353A0CBAD75BB /* Pods-Github Repository-Github RepositoryTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Github Repository-Github RepositoryTests.release.xcconfig"; path = "Target Support Files/Pods-Github Repository-Github RepositoryTests/Pods-Github Repository-Github RepositoryTests.release.xcconfig"; sourceTree = "<group>"; };
 		D311B33B04F9218BF013F83B /* Pods_Github_Repository.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Github_Repository.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -108,14 +114,12 @@
 		FA17715C2327941600CD682D /* AuthenticationUseCasePlatform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationUseCasePlatform.swift; sourceTree = "<group>"; };
 		FA17715F2327947C00CD682D /* UserProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProvider.swift; sourceTree = "<group>"; };
 		FA17716123279D2900CD682D /* AccessToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessToken.swift; sourceTree = "<group>"; };
-		FA17716423279E0C00CD682D /* LoginNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginNavigator.swift; sourceTree = "<group>"; };
 		FA17716623279E1300CD682D /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		FA17716823279E2100CD682D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		FA17716923279E2100CD682D /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		FA17716D2328CF9700CD682D /* OpenAuthenticationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAuthenticationViewController.swift; sourceTree = "<group>"; };
 		FA17716E2328CF9700CD682D /* OpenAuthenticationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OpenAuthenticationViewController.xib; sourceTree = "<group>"; };
 		FA1771712328CFA600CD682D /* OpenAuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAuthenticationViewModel.swift; sourceTree = "<group>"; };
-		FA1771732328CFBC00CD682D /* OpenAuthenticationNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAuthenticationNavigator.swift; sourceTree = "<group>"; };
 		FA1771792328EF9700CD682D /* Github RepositoryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Github RepositoryTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA17717B2328EF9700CD682D /* OpenAuthenticationViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAuthenticationViewModelTest.swift; sourceTree = "<group>"; };
 		FA17717D2328EF9700CD682D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -153,6 +157,17 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		65CF96952337396D008C090F /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				65CF969623373985008C090F /* Coordinator.swift */,
+				65CF969E23376040008C090F /* BaseComponentCoordinator.swift */,
+				65CF969C2337601B008C090F /* LoginComponentCoordinator.swift */,
+				65CF96A02337C5C5008C090F /* PhotosComponentCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
 		7DCC9E061EBDDBE73AB18C4B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -185,6 +200,7 @@
 		FA1770FF2321F5A500CD682D /* Github Repository */ = {
 			isa = PBXGroup;
 			children = (
+				65CF96952337396D008C090F /* Coordinator */,
 				FA1771152321FEB600CD682D /* Scenes */,
 				FA1771402322583F00CD682D /* Common */,
 				FA1771142321FCF400CD682D /* Application */,
@@ -349,7 +365,6 @@
 		FA17716323279E0100CD682D /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				FA17716423279E0C00CD682D /* LoginNavigator.swift */,
 				FA17716623279E1300CD682D /* LoginViewModel.swift */,
 				FA17716823279E2100CD682D /* LoginViewController.swift */,
 				FA17716923279E2100CD682D /* LoginViewController.xib */,
@@ -360,7 +375,6 @@
 		FA17716C2328CF7E00CD682D /* OpenAuthentication */ = {
 			isa = PBXGroup;
 			children = (
-				FA1771732328CFBC00CD682D /* OpenAuthenticationNavigator.swift */,
 				FA1771712328CFA600CD682D /* OpenAuthenticationViewModel.swift */,
 				FA17716D2328CF9700CD682D /* OpenAuthenticationViewController.swift */,
 				FA17716E2328CF9700CD682D /* OpenAuthenticationViewController.xib */,
@@ -568,6 +582,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65CF96A12337C5C5008C090F /* PhotosComponentCoordinator.swift in Sources */,
+				65CF969D2337601B008C090F /* LoginComponentCoordinator.swift in Sources */,
 				FA1771722328CFA600CD682D /* OpenAuthenticationViewModel.swift in Sources */,
 				FA1771442322592000CD682D /* Application.swift in Sources */,
 				FA17712B23223EF000CD682D /* PhotoProvider.swift in Sources */,
@@ -576,6 +592,7 @@
 				FA17714A2326453600CD682D /* PhotoCollectionViewCell.swift in Sources */,
 				FA1771532327837F00CD682D /* PhotoViewModel.swift in Sources */,
 				FA1771012321F5A500CD682D /* AppDelegate.swift in Sources */,
+				65CF969723373985008C090F /* Coordinator.swift in Sources */,
 				FA17713F2322570F00CD682D /* PhotosNavigator.swift in Sources */,
 				FA17714F2326526200CD682D /* KingFisherManage+Rx.swift in Sources */,
 				FA17713D232251F900CD682D /* PhotosViewModel.swift in Sources */,
@@ -585,9 +602,7 @@
 				FA1771602327947C00CD682D /* UserProvider.swift in Sources */,
 				FA1771282322366000CD682D /* UseCasesProvider.swift in Sources */,
 				FA1771242322183500CD682D /* UserProfileSource.swift in Sources */,
-				FA17716523279E0C00CD682D /* LoginNavigator.swift in Sources */,
 				FA17713823224E7200CD682D /* UseCasesProviderPlatform.swift in Sources */,
-				FA1771742328CFBC00CD682D /* OpenAuthenticationNavigator.swift in Sources */,
 				FA17716723279E1300CD682D /* LoginViewModel.swift in Sources */,
 				FA1771422322584700CD682D /* ViewModelType.swift in Sources */,
 				FA17714D2326524400CD682D /* Kingfisher+Rx.swift in Sources */,
@@ -595,6 +610,7 @@
 				FA17715D2327941600CD682D /* AuthenticationUseCasePlatform.swift in Sources */,
 				FA17712223220B0500CD682D /* PhotoSource.swift in Sources */,
 				FA17715123275DE800CD682D /* PhotosError.swift in Sources */,
+				65CF969F23376040008C090F /* BaseComponentCoordinator.swift in Sources */,
 				FA17715B232793BA00CD682D /* AuthenticationUseCase.swift in Sources */,
 				FA17712023220A2600CD682D /* PhotoAttribute.swift in Sources */,
 				FA1771552327854300CD682D /* PhotoNavigator.swift in Sources */,

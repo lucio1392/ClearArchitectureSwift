@@ -24,15 +24,13 @@ final class LoginViewModel: ViewModelType {
     
     //MARK: Private
     private let authenUseCase: AuthenticationUseCase    
-    private let loginNavigator: LoginNavigation
-    private let authenCode: PublishSubject<String>
+    private let coordinator: LoginComponentCoordinator
+    private let authenCode: PublishSubject<String> = PublishSubject<String>()
     
     init(_ authenUseCase: AuthenticationUseCase,
-         loginNavigator: LoginNavigation,
-         authenCode: PublishSubject<String>) {
+         loginCoordinator: LoginComponentCoordinator) {
         self.authenUseCase = authenUseCase
-        self.loginNavigator = loginNavigator
-        self.authenCode = authenCode
+        self.coordinator = loginCoordinator
     }
     
     func transform(input: Input) -> Output {
@@ -41,15 +39,21 @@ final class LoginViewModel: ViewModelType {
             .onLogin
             .drive(onNext: { [weak self] in
                 guard let `self` = self else { return }
-                self.loginNavigator.toLoginURL()
+                let openAuthenViewModel = OpenAuthenticationViewModel(self.authenUseCase,
+                                                                      coordinator: self.coordinator,
+                                                                      authenCode: self.authenCode)
+                self.coordinator.transition(to: LoginScene.authen(openAuthenViewModel), type: .present, component: self.coordinator)                
         })
             .disposed(by: disposedBag)
         
         let authenResult = authenCode
             .flatMap {
-                self.authenUseCase.accessToken(code: $0).share()
-        }
-        
+                self.authenUseCase.accessToken(code: $0)
+        }.share()
+
+//        authenResult.map { _ in }.bind(to: self.coordinator.didLoginSubject).disposed(by: disposedBag)
+
+
         let output = Output(authenResult: authenResult)
         return output
     }

@@ -17,7 +17,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         window = UIWindow(frame: UIScreen.main.bounds)
-        Application.default.configureMainInterface(window: window!)
+        let sdk = Application()
+        sdk.configSDK(window: window!)
+        sdk.openLogin()
         return true
     }
     

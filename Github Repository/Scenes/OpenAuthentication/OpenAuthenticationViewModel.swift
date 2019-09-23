@@ -23,14 +23,14 @@ final class OpenAuthenticationViewModel: ViewModelType {
     }
     
     private let authenUseCase: AuthenticationUseCase
-    private let navigator: OpenAuthenticationNavigation
+    private let coordinator: LoginComponentCoordinator
     private let authenCode: PublishSubject<String>
     
     init(_ authenUseCase: AuthenticationUseCase,
-         navigator: OpenAuthenticationNavigation,
+         coordinator: LoginComponentCoordinator,
          authenCode: PublishSubject<String>) {
         self.authenUseCase = authenUseCase
-        self.navigator = navigator
+        self.coordinator = coordinator
         self.authenCode = authenCode
     }
     
@@ -50,11 +50,12 @@ final class OpenAuthenticationViewModel: ViewModelType {
                 return self.authenUseCase.openAuthen(param: "code", resultUrl: $0)
             }
             .share()
-        
-        
+
         authenCode
-            .subscribe(onNext: { code in
-                self.navigator.toLogin()
+            .subscribe(onNext: { [weak self] code in
+                guard let `self` = self else { return }
+                self.coordinator.dismiss()
+                self.coordinator.delegate?.didLogin()
             })
             .disposed(by: disposeBag)
         
@@ -65,7 +66,7 @@ final class OpenAuthenticationViewModel: ViewModelType {
         denyAuthorize
             .subscribe(onNext: { [weak self] _ in
                 guard let `self` = self else { return }
-                self.navigator.toLogin()
+                self.coordinator.dismiss()
         })
             .disposed(by: disposeBag)
         
