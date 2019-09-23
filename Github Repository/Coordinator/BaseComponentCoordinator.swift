@@ -15,8 +15,9 @@ class BaseComponentCoordinator: ComponentCoordinator {
 
     private var window: UIWindow!
 
-    init(_ window: UIWindow) {
+    init(_ window: UIWindow, currentViewController: UIViewController?) {
         self.window = window
+        self.currentViewController = currentViewController
     }
 
     static func actualViewController(for viewController: UIViewController) -> UIViewController {

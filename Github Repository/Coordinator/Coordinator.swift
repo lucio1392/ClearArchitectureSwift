@@ -9,24 +9,6 @@
 import Foundation
 import RxSwift
 
-enum LoginScene: Scene {
-
-    case login(LoginViewModel)
-    case authen(OpenAuthenticationViewModel)
-
-    var viewController: UIViewController {
-        switch self {
-        case .login(let viewModel):
-            let loginViewController = LoginViewController(viewModel)
-            return loginViewController
-        case .authen(let viewModel):
-            let openAuthenViewController = OpenAuthenticationViewController(viewModel)
-            return openAuthenViewController
-        }
-
-    }
-}
-
 protocol Scene {
     var viewController: UIViewController { get }
 }

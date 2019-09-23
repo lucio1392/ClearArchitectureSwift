@@ -55,7 +55,6 @@ final class OpenAuthenticationViewModel: ViewModelType {
             .subscribe(onNext: { [weak self] code in
                 guard let `self` = self else { return }
                 self.coordinator.dismiss()
-                self.coordinator.delegate?.didLogin()
             })
             .disposed(by: disposeBag)
         

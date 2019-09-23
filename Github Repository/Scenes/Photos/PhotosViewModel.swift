@@ -24,12 +24,12 @@ final class PhotosViewModel: ViewModelType {
     }
     
     private let photoUseCase: PhotoUseCase
-    private let photosNavigator: PhotosNavigation
+    private let photosCoordinator: PhotoComponentCoordinator
     private let disposedBag = DisposeBag()
     
-    init(_ photoUseCase: PhotoUseCase, photoNavigator: PhotosNavigation) {
+    init(_ photoUseCase: PhotoUseCase, photosCoordinator: PhotoComponentCoordinator) {
         self.photoUseCase = photoUseCase
-        self.photosNavigator = photoNavigator
+        self.photosCoordinator = photosCoordinator
     }
     
     func transform(input: Input) -> Output {
@@ -49,10 +49,7 @@ final class PhotosViewModel: ViewModelType {
         
         input
             .onToPhoto
-            .drive(onNext: { [weak self] in
-                guard let `self` = self else { return }
-                self.photosNavigator.toPhoto(photo: $0)
-        })
+            .drive()
             .disposed(by: disposedBag)
         
         return Output(photos: photos,

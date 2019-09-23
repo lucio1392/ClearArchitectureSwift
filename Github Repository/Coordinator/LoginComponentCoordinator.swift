@@ -9,12 +9,26 @@
 import Foundation
 import RxSwift
 
-protocol LoginComponentDelegate: class {
-    func didLogin()
+enum LoginScene: Scene {
+    
+    case login(LoginViewModel)
+    case authen(OpenAuthenticationViewModel)
+    
+    var viewController: UIViewController {
+        switch self {
+        case .login(let viewModel):
+            let loginViewController = LoginViewController(viewModel)
+            return loginViewController
+        case .authen(let viewModel):
+            let openAuthenViewController = OpenAuthenticationViewController(viewModel)
+            return openAuthenViewController
+        }
+        
+    }
 }
 
 class LoginComponentCoordinator: BaseComponentCoordinator {
 
-    weak var delegate: LoginComponentDelegate?
+    var didLoginWithAccessToken: PublishSubject<AccessToken> = PublishSubject<AccessToken>()
     
 }

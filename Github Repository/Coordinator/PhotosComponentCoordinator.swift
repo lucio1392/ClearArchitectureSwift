@@ -7,3 +7,24 @@
 //
 
 import Foundation
+import RxSwift
+
+enum PhotosScene: Scene {
+    
+    case photos(PhotosViewModel)
+    
+    var viewController: UIViewController {
+        switch self {
+        case .photos(let viewModel):
+            let photosViewController = PhotosViewController(viewModel)
+            return photosViewController
+        }
+        
+    }
+}
+
+class PhotoComponentCoordinator: BaseComponentCoordinator {
+    
+    
+    
+}

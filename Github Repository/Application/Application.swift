@@ -8,43 +8,57 @@
 
 import Foundation
 import UIKit
+import RxSwift
 
 protocol Applicationable {
-    func configSDK(window: UIWindow)
     func openLogin()
     func openPhotos()
 }
 
-final class Application: Applicationable {
-
-    private var window: UIWindow!
-
-    private var currentComponent: ComponentCoordinator?
-
-    private let useCaseProvider: UseCasesProvider = UseCasesProviderPlatform()
-
-    func configSDK(window: UIWindow) {
-        self.window = window
-    }
-
-    func openLogin() {
-        let loginComponentCoordinator = LoginComponentCoordinator(self.window)        
-        loginComponentCoordinator.delegate = self
-        let loginViewModel = LoginViewModel(useCaseProvider.makeAuthenticationUseCaseProvider(), loginCoordinator: loginComponentCoordinator)
-        loginComponentCoordinator.transition(to: LoginScene.login(loginViewModel), type: .root, component: loginComponentCoordinator)
-        currentComponent = loginComponentCoordinator
-    }
-
-    func openPhotos() {
-
-    }
-
+protocol SDKApplicationDelegate: class {
+    func didOpenLogin()
+    func didOpenPhotos()
+    func didLoginWith(accessToken: AccessToken)
 }
 
-extension Application: LoginComponentDelegate {
-
-    func didLogin() {
-        print("Did Login")
+final class Application: Applicationable {
+    
+    static let `default` = Application()
+    
+    weak var delegate: SDKApplicationDelegate?
+    
+    private var transitionType: SceneTransitionType!
+    
+    private var coordinatorManage: CoordinatorManageType!
+    
+    private let disposeBag = DisposeBag()
+    
+    private init() {}
+    
+    func config(_ window: UIWindow,
+                transitionType: SceneTransitionType,
+                currentViewController: UIViewController?) {
+        self.coordinatorManage = CoordinatorManage(window, currentViewController: currentViewController)
+        self.transitionType = transitionType
     }
-
+    
+    func openLogin() {
+        coordinatorManage.openLoginComponent(transition: transitionType)
+        
+        coordinatorManage
+            .didLoginWithAccessToken
+            .subscribe(onNext: { [weak self] accessToken in
+                guard let `self` = self else { return }
+                self.delegate?.didLoginWith(accessToken: accessToken)
+        })
+            .disposed(by: disposeBag)
+        
+        delegate?.didOpenLogin()
+    }
+    
+    func openPhotos() {
+        coordinatorManage.openPhotosComponent(transition: transitionType)
+        delegate?.didOpenPhotos()
+    }
+    
 }

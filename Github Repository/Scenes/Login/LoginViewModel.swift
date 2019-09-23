@@ -30,7 +30,7 @@ final class LoginViewModel: ViewModelType {
     init(_ authenUseCase: AuthenticationUseCase,
          loginCoordinator: LoginComponentCoordinator) {
         self.authenUseCase = authenUseCase
-        self.coordinator = loginCoordinator
+        self.coordinator = loginCoordinator                
     }
     
     func transform(input: Input) -> Output {
@@ -48,8 +48,12 @@ final class LoginViewModel: ViewModelType {
         
         let authenResult = authenCode
             .flatMap {
-                self.authenUseCase.accessToken(code: $0)
+                self.authenUseCase.accessToken(code: $0).share()
         }.share()
+        
+        authenResult
+            .bind(to: coordinator.didLoginWithAccessToken)
+            .disposed(by: disposedBag)
 
 //        authenResult.map { _ in }.bind(to: self.coordinator.didLoginSubject).disposed(by: disposedBag)
 
